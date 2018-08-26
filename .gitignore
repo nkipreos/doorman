@@ -19,6 +19,7 @@ var/
 .installed.cfg
 *.egg
 environment
+.DS_Store
 
 # Serverless directories
 .serverless
