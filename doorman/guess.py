@@ -71,4 +71,6 @@ def guess(event, context):
             ]
         }
         resp = requests.post("https://slack.com/api/chat.postMessage", headers={'Content-Type':'application/json;charset=UTF-8', 'Authorization': 'Bearer %s' % slack_token}, json=data)
+        lock_resp = requests.put(os.environ.get('LOCK_URL'), headers={'Authorization': 'Bearer ' + os.environ.get('LOCK_KEY')})
+
         return {}
