@@ -26,7 +26,7 @@ def guess(event, context):
         CollectionId=rekognition_collection_id,
         Image=image,
         MaxFaces=1,
-        FaceMatchThreshold=70)
+        FaceMatchThreshold=90)
 
     s3 = boto3.resource('s3')
 
